@@ -61,12 +61,12 @@ def smtp_config():
         db.session.commit()
 
         # Dynamically configure Flask-Mail
-        app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-        app.config['MAIL_PORT'] = 587
+        app.config['MAIL_SERVER'] = 'smtp.gmail.com' #This is the mail server for google only
+        app.config['MAIL_PORT'] = 587 #This is the mail port for google only
         app.config['MAIL_USE_TLS'] = True  # Assume TLS is used for simplicity
-        app.config['MAIL_USERNAME'] = 'cartoonsticker1@gmail.com'
-        app.config['MAIL_PASSWORD'] = 'Kush12345'
-        app.config['MAIL_DEFAULT_SENDER'] = 'cartoonsticker1@gmail.com'
+        app.config['MAIL_USERNAME'] = Enter your email here
+        app.config['MAIL_PASSWORD'] = Enter your password
+        app.config['MAIL_DEFAULT_SENDER'] = Enter your email here
 
         # Reinitialize Mail with new configuration
         mail.init_app(app)
