@@ -18,3 +18,40 @@ SQLite: A lightweight database to store user information and email logs.
 HTML/CSS: Used for the basic front-end layout of the web interface.
 # Requirements 
 pip install Flask flask-mail
+
+# Steps to run
+
+Configure SMTP Settings:
+Before you can send emails, you need to configure the SMTP settings by providing the details for your email service (such as Gmail).
+Start the app and visit the /smtp_config page.
+Enter the following details:
+SMTP Server: smtp.gmail.com
+Port: 587
+Sender Email: your_email@gmail.com
+Sender Password: your_password
+Important: If you're using Gmail, ensure that you've enabled "Less Secure Apps" or have created an App Password for increased security.
+
+
+
+Test Login:
+Go to the login page (/login) and use the following test credentials:
+Test Email: 'testuser@example.com'
+Test Password: 'testpassword'
+Once logged in, you will be redirected to the dashboard.
+
+
+Open the server:
+Once done with all the above steps go to the directory for app.py and open it in the terminal, once done you can run this command 'python app.py'.
+After runnning you should have a link to the server which looks like this 'http://127.0.0.1:5000'
+Now you can use the app here
+
+
+
+Send a Test Email:
+After logging in, go to the /send_email page to send a test email.
+Fill out the following details:
+Recipient Email: recipient@example.com (you can use any valid email)
+Subject: Test Email
+Message: This is a test email.
+Click the Send Email button.
+If the email is sent successfully, you will see a success message. If there is any issue, an error message will appear.
